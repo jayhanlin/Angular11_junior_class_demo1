@@ -8,13 +8,15 @@ import { Component, OnInit } from '@angular/core';
 export class HeaderComponent implements OnInit {
   sitename = 'Hello Angular 11';
   sitelogo = '/assets/images/angular11_logo.png';
-  sitetitle2 = 'Angular 11 新手開發練功坊課程實作練習';
+  subtitle = 'Angular 11 新手開發練功坊課程實作練習';
+  logoname = 'The Will Will Web';
+
   constructor() {}
 
   ngOnInit(): void {
     setTimeout(() => {
       this.sitename = 'Hello Word';
-      this.sitetitle2 = '練習練習';
+      this.subtitle = '練習練習';
     }, 2000);
   }
 }
