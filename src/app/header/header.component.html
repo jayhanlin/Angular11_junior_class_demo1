@@ -24,11 +24,11 @@
   <div class="title-wrapper">
     <div class="container">
 
-      <img [src]="sitelogo" class="pull-left logo" [title]="logoname" [attr.data-aaaaaa]="sitename">
+      <img [src]="sitelogo" class="pull-left logo" [title]="logoname" [attr.data-aaaaaa]="sitename" (click)="changeName($event)">
 
       <div class="pull-left">
         <h1><a href="https://github.com/jayhanlin">{{sitename}}</a></h1>
-        <h3>{{subtitle}}</h3>
+        <h3 [ngStyle]="{'font-size': counter + 'px' }">{{ subtitle }} {{ counter }}</h3>
       </div>
 
       <div id="social-icons" class="pull-right social-icon">
