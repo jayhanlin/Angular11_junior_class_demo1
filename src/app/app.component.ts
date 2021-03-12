@@ -1,6 +1,7 @@
 /* eslint-disable max-len */
 import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import { DataService } from './data.service';
 import { Article } from './Article';
 
 @Component({
@@ -14,9 +15,9 @@ export class AppComponent implements OnInit {
   search = {
     keyword: 'demo1',
   };
-  constructor(private http: HttpClient) {}
+  constructor(private datasvc: DataService) {}
   ngOnInit(): void {
-    this.http.get<Article[]>('/api/articles.json').subscribe(results => {
+    this.datasvc.loadArticles().subscribe((results) => {
       this.data = results;
     });
   }
