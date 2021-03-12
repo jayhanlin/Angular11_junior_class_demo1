@@ -7,6 +7,7 @@ import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { RecentCommentsComponent } from './footer/recent-comments/recent-comments.component';
 import { FormsModule } from '@angular/forms';
+import { MaskPipe } from './mask.pipe';
 
 @NgModule({
   declarations: [
@@ -14,6 +15,7 @@ import { FormsModule } from '@angular/forms';
     HeaderComponent,
     FooterComponent,
     RecentCommentsComponent,
+    MaskPipe,
   ],
   imports: [
     BrowserModule,
