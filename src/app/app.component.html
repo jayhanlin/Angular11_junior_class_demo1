@@ -8,6 +8,7 @@
     <section class="col-md-8 content-wrapper">
       <div id="ctl00_cphBody_divError"></div>
       <div id="ctl00_cphBody_PostList1_posts" class="posts">
+        <pre>{{ 123456789 | currency:'TWD':'symbol':'4.5' }}</pre>
         <!-- Article START-->
         <article class="post" id="post{{i}}" *ngFor="let item of data; let i=index">
           <header class="post-header">
